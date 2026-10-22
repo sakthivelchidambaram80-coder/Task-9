@@ -1,0 +1,206 @@
+
+/* Product Details Page */
+
+.product-page {
+  padding: 24px 20px;
+  color: #29231f;
+  font-family: "Sora", sans-serif;
+}
+
+/* Product Image */
+
+.product-detail-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 0.78;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Back Button */
+
+.product-back-button {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  margin-bottom: 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #c87d4d;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  
+ 
+}
+
+/* Product Title and Rating */
+
+.product-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.product-title-row h1 {
+  color: #29231f;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.product-muted {
+  color: #89837d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.product-title-row .product-muted {
+  margin-top: 5px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Description and Options */
+
+.product-option-title {
+  margin: 23px 0 13px;
+  color: #29231f;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.product-description {
+  margin-bottom: 22px;
+}
+
+/* Coffee Size Selection */
+
+.product-size-options {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.product-size-button {
+  flex: 1;
+  min-height: 44px;
+  border: 1px solid #ece7e1;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #3c281d;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.product-size-button:hover {
+  border-color: #6f4e37;
+}
+
+.product-size-button.selected {
+  border-color: #6f4e37;
+  background: #eee4dc;
+  color: #3c281d;
+  font-weight: 700;
+}
+
+/* Price and Buy Button */
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 26px 0 18px;
+}
+
+.product-eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  color: #89837d;
+  font-size: 12px;
+}
+
+.product-footer h2 {
+  color: #3c281d;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+/* Product Buttons */
+
+.product-button {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  margin-top: 0;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 14px;
+  background:  #c87d4d;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.product-button:hover {
+  background:  #c87d4d;
+}
+
+.product-page > .product-button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 360px) {
+  .product-page {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .product-title-row {
+    gap: 8px;
+    margin: 18px 0;
+  }
+
+  .product-title-row h1 {
+    font-size: 22px;
+  }
+
+  .product-detail-image {
+    aspect-ratio: 1 / 0.85;
+  }
+
+  .product-footer {
+    gap: 10px;
+  }
+
+  .product-footer h2 {
+    font-size: 21px;
+  }
+
+  .product-footer .product-button {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+}

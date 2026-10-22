@@ -1,0 +1,201 @@
+
+
+.onboarding-screen {
+  position: relative;
+  width: 100%;  
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #050505 75%,
+    #080808 100%
+  );
+}
+
+/* Status bar */
+
+.onboarding-status-bar {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  padding: 13px 24px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.onboarding-time {
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 23px;
+  letter-spacing: -0.4px;
+}
+
+.onboarding-status-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 20px;
+}
+
+.onboarding-status-icons svg {
+  display: block;
+  width: 20px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.onboarding-status-icons svg:last-child {
+  width: 29px;
+  height: 17px;
+}
+
+/* Coffee image */
+
+.onboarding-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 495px;
+  overflow: hidden;
+  background: #050403;
+}
+
+.onboarding-coffee-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+}
+
+.onboarding-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.02) 45%,
+    rgba(0, 0, 0, 0.25) 68%,
+    #050505 100%
+  );
+}
+
+/* Main content */
+
+.onboarding-content {
+  position: absolute;
+  z-index: 2;
+  top: 479px;
+  left: 0;
+  width: 100%;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.onboarding-content h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 750;
+  line-height: 1.42;
+  letter-spacing: -1.1px;
+}
+
+/* Description */
+
+.onboarding-description {
+  margin: 10px -2px 0;
+  color: #a4a4a4;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.05px;
+}
+
+/* Get started button */
+
+.onboarding-start-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 57px;
+  margin-top: 32px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 20px;
+  background: #c77f50;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.onboarding-start-button:hover {
+  background: #b96f42;
+}
+
+.onboarding-start-button:active {
+  transform: scale(0.99);
+}
+
+/* iPhone bottom indicator */
+
+.onboarding-home-indicator {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.onboarding-home-indicator span {
+  display: block;
+  width: 134px;
+  height: 5px;
+  border-radius: 10px;
+  background: #292929;
+}
+
+/* 375px mobile layout */
+
+@media (min-width: 376px) {
+  .onboarding-screen {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 374px) {
+  .onboarding-content {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .onboarding-content h1 {
+    font-size: clamp(28px, 9vw, 33px);
+  }
+
+  .onboarding-description {
+    font-size: 13px;
+  }
+
+  .onboarding-start-button {
+    margin-top: 26px;
+  }
+}

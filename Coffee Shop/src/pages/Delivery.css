@@ -1,0 +1,471 @@
+
+.delivery-screen {
+  position: relative;
+  width: 100%;
+ 
+  min-height: 100dvh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Map */
+
+.delivery-map {
+  position: relative;
+  width: 100%;
+  height: 61.5dvh;
+  min-height: 390px;
+  max-height: 650px;
+  overflow: hidden;
+  background-color: #f6f6f6;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 48%,
+      #fff 48%,
+      #fff 49.5%,
+      #eaeaea 49.5%,
+      #eaeaea 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 30%,
+      #fff 30%,
+      #fff 32%,
+      #eaeaea 32%,
+      #eaeaea 32.4%,
+      transparent 32.4%
+    );
+  background-size: 170px 170px, 190px 190px;
+}
+
+/* Map street names */
+
+.map-label {
+  position: absolute;
+  z-index: 1;
+  color: #8f8f8f;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.label-one {
+  top: 9%;
+  left: 34%;
+}
+
+.label-two {
+  top: 21%;
+  left: 31%;
+}
+
+.label-three {
+  top: 57%;
+  left: 26%;
+}
+
+.label-four {
+  top: 30%;
+  right: 0;
+}
+
+.label-five {
+  top: 67%;
+  right: 0;
+}
+
+.label-six {
+  top: 68%;
+  left: 25%;
+  width: 105px;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.15;
+}
+
+/* Map roads */
+
+.map-road {
+  position: absolute;
+  background: #fff;
+  border: 2px solid #ededed;
+  border-radius: 4px;
+}
+
+.road-one {
+  top: 36%;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  transform: rotate(-2deg);
+}
+
+.road-two {
+  top: 0;
+  left: 67%;
+  width: 15px;
+  height: 100%;
+}
+
+.road-three {
+  top: 0;
+  left: 33%;
+  width: 14px;
+  height: 100%;
+}
+
+.road-four {
+  top: 52%;
+  left: 0;
+  width: 40%;
+  height: 16px;
+  transform: rotate(8deg);
+}
+
+/* Orange delivery route */
+
+.delivery-route {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Back and location buttons */
+
+.map-control {
+  position: absolute;
+  z-index: 4;
+  top: 13.5%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #292929;
+  background: #ededed;
+  border: none;
+  border-radius: 20px;
+}
+
+.back-control {
+  left: 6.5%;
+}
+
+.back-control svg {
+  transform: rotate(180deg);
+}
+
+.location-control {
+  right: 6.5%;
+}
+
+/* Destination pin */
+
+.destination-pin {
+  position: absolute;
+  z-index: 3;
+  top: 42%;
+  left: 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destination-pin svg {
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 2px 1px #ddd);
+}
+
+.destination-pin span {
+  width: 20px;
+  height: 4px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: #cb8050;
+  opacity: 0.3;
+}
+
+/* Courier map icon */
+
+.courier-map-marker {
+  position: absolute;
+  z-index: 4;
+  top: 62%;
+  left: 62%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cb8050;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+/* Bottom white panel */
+
+.delivery-panel {
+  position: relative;
+
+  min-height: 440px;
+  margin-top: -px;
+  padding: 0 6.4% 45px;
+  background: #fff;
+  border-radius: 28px 28px 0 0;
+}
+
+/* Panel handle */
+
+.panel-handle {
+  position: relative;
+  top: 15px;
+  width: 58px;
+  height: 7px;
+  margin: 0 auto;
+  background: #e1e1e1;
+  border-radius: 10px;
+}
+
+/* Delivery ETA */
+
+.delivery-heading {
+  padding-top: 31px;
+  text-align: center;
+}
+
+.delivery-heading h1 {
+  margin: 0;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.delivery-heading p {
+  margin: 12px 0 0;
+  color: #a2a2a2;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.delivery-heading strong {
+  color: #303030;
+  font-weight: 650;
+}
+
+/* Progress indicator */
+
+.delivery-progress {
+  display: flex;
+  gap: 12px;
+  margin: 52px 12px 32px;
+}
+
+.delivery-progress span {
+  flex: 1;
+  height: 7px;
+  background: #e2e2e2;
+  border-radius: 20px;
+}
+
+.delivery-progress span.completed {
+  background: #35c482;
+}
+
+/* Order status card */
+
+.delivery-status {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+  min-height: 77px;
+  padding: 15px 17px;
+  border: 1.5px solid #e2e2e2;
+  border-radius: 23px;
+}
+
+.status-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: #cb8050;
+  border: 1.5px solid #e2e2e2;
+  border-radius: 20px;
+}
+
+.status-icon svg {
+  width: 37px;
+  height: 37px;
+}
+
+.status-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.status-copy h2 {
+  margin: 0 0 12px;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.status-copy p {
+  margin: 0;
+  color: #a2a2a2;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Courier profile */
+
+.courier-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.courier-avatar {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.courier-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.courier-info h2 {
+  margin: 0 0 10px;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.courier-info p {
+  margin: 0;
+  color: #a2a2a2;
+  font-size: 14px;
+}
+
+/* Call courier button */
+
+.call-button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: #292929;
+  background: #fff;
+  border: 1.5px solid #e2e2e2;
+  border-radius: 21px;
+  cursor: pointer;
+}
+
+.call-button:active {
+  background: #f5f5f5;
+}
+
+/* Bottom phone indicator */
+
+.home-indicator {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 430px;
+  height: 27px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.home-indicator span {
+  width: 36%;
+  max-width: 210px;
+  height: 6px;
+  background: #111;
+  border-radius: 20px;
+}
+
+/* Extra-small mobile screens */
+
+@media (max-width: 360px) {
+  .delivery-map {
+    min-height: 350px;
+  }
+
+  .delivery-heading h1 {
+    font-size: 22px;
+  }
+
+  .delivery-heading p {
+    font-size: 14px;
+  }
+
+  .delivery-progress {
+    gap: 7px;
+    margin: 38px 0 25px;
+  }
+
+  .delivery-status {
+    gap: 11px;
+    padding: 12px;
+  }
+
+  .status-icon {
+    width: 58px;
+    height: 82px;
+  }
+
+  .status-copy h2 {
+    font-size: 16px;
+  }
+
+  .status-copy p {
+    font-size: 13px;
+  }
+
+  .courier-avatar {
+    width: 62px;
+    height: 62px;
+  }
+
+  .courier-info h2 {
+    font-size: 15px;
+  }
+
+  .courier-info p {
+    font-size: 13px;
+  }
+
+  .call-button {
+    width: 52px;
+    height: 52px;
+  }
+}

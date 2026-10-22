@@ -1,0 +1,522 @@
+
+/* Order Page */
+
+.order-page {
+  min-height: 100vh;
+  padding: 24px 20px 320px;
+  background: #f8f8f8;
+  color: #292929;
+  font-family: "Sora", sans-serif;
+}
+
+/* Header */
+
+.order-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  margin: 18px 0 68px;
+}
+
+.order-header h1 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.order-back-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #292929;
+}
+
+.order-header-spacer {
+  width: 40px;
+}
+
+/* Deliver / Pickup Toggle */
+
+.order-type-switch {
+  display: flex;
+  gap: 4px;
+  width: 327px;
+  min-height: 43px;
+  margin-bottom: 52px;
+  padding: 8px;
+  border-radius: 25px;
+  background: #ededed;
+  
+ 
+}
+
+.order-type-switch button {
+  flex: 1;
+  border: 0;
+  border-radius: 17px;
+  background: transparent;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.order-type-switch button.selected {
+  background: #c87d4d;
+  color: #ffffff;
+  font-weight: 700;
+  width: 153px;
+  height: 35px;
+}
+
+/* Delivery Address */
+
+.order-address-section h2,
+.order-summary h2 {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.order-address-info h3 {
+  
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.order-address-info p {
+  color: #a2a2a2;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.order-address-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #dedede;
+}
+
+.order-address-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 26px;
+  padding: 8px 15px;
+  border: 1.5px solid #a7a7a7;
+  border-radius: 24px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 13px;
+}
+
+.order-note {
+  margin-top: 12px;
+  color: #777777;
+  font-size: 13px;
+}
+
+/* Pickup Information */
+
+.order-pickup-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #c87d4d;
+  
+}
+
+.order-pickup-info h2 {
+  margin-bottom: 6px;
+  color: #292929;
+  font-size: 16px;
+}
+
+.order-pickup-info p {
+  color: #999999;
+  font-size: 13px;
+}
+
+/* Cart Items */
+
+.order-items-section {
+  margin: 32px 0 38px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 0 0;
+}
+
+.order-item + .order-item {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.order-item > img {
+  flex-shrink: 0;
+  width: 72px;
+  height: 82px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.order-item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.order-item-details h3 {
+  margin-bottom: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.order-item-details p {
+  margin-bottom: 5px;
+  color: #a0a0a0;
+  font-size: 13px;
+}
+
+.order-item-details > span {
+  display: block;
+  margin-bottom: 6px;
+  color: #999999;
+  font-size: 11px;
+}
+
+.order-item-details strong {
+  display: block;
+  color: #c87d4d;
+  font-size: 14px;
+}
+
+.order-quantity {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-quantity span {
+  min-width: 14px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.order-quantity button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #f0e7e1;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #292929;
+}
+
+/* Empty Cart */
+
+.order-empty-cart {
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.order-empty-cart p {
+  margin-bottom: 14px;
+  color: #888888;
+  font-size: 14px;
+}
+
+.order-empty-cart button {
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 12px;
+  background: #c87d4d;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Discount Card */
+
+.order-discount-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 56px;
+  margin: 28px 0 50px;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 24px;
+  background: #ffffff;
+  color: #c87d4d;
+  text-align: left;
+}
+
+.order-discount-card span {
+  flex: 1;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.order-discount-card > svg:last-child {
+  color: #292929;
+}
+
+/* Payment Summary */
+
+.order-summary h2 {
+  font-size: 16px;
+  margin-bottom: 38px;
+}
+
+.order-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.order-summary-row > span {
+  color: #383838;
+}
+
+.order-summary-row > strong {
+  font-weight: 700;
+}
+
+.order-delivery-prices {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-delivery-prices del {
+  color: #333333;
+}
+
+.order-delivery-prices strong {
+  font-weight: 700;
+}
+
+.order-total-row {
+  padding-top: 14px;
+  border-top: 1px solid #e5e5e5;
+  font-weight: 700;
+}
+
+/* Fixed Checkout Area */
+
+.order-checkout {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 20px max(28px, env(safe-area-inset-bottom));
+  border-radius: 28px 28px 0 0;
+  background: #ffffff;
+  box-shadow: 0 -6px 30px rgba(0, 0, 0, 0.035);
+}
+
+/* Payment Method */
+
+.order-payment-selector {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  margin-bottom: 22px;
+  border: 0;
+  background: transparent;
+  color: #c87d4d;
+  text-align: left;
+}
+
+.order-payment-selector > span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-payment-selector strong {
+  color: #292929;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.order-payment-selector small {
+  color: #c87d4d;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.order-payment-selector > svg:last-child {
+  color: #292929;
+  transition: transform 0.2s ease;
+}
+
+.order-payment-selector > svg.rotated {
+  transform: rotate(180deg);
+}
+
+/* Payment Options */
+
+.order-payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.order-payment-options button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #333333;
+  text-align: left;
+  font-size: 13px;
+}
+
+.order-payment-options button.selected {
+  border-color: #c87d4d;
+  background: #fff7f1;
+  color: #b66e42;
+}
+
+/* Order Button */
+
+.order-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 74px;
+  border: 0;
+  border-radius: 28px;
+  background: #c87d4d;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.order-submit-button:hover {
+  background: #b66e42;
+}
+
+.order-submit-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.order-feedback {
+  margin-top: 12px;
+  color: #6f4e37;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.btn{
+  width: 100%;
+  color: white;
+  background-color: #c87d4d;
+  height: 56px;
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+
+@media (max-width: 380px) {
+  .order-page {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .order-header {
+    margin-bottom: 48px;
+  }
+
+  .order-type-switch {
+    min-height: 68px;
+    margin-bottom: 38px;
+  }
+
+  .order-type-switch button {
+    font-size: 16px;
+  }
+
+  .order-item {
+    gap: 10px;
+  }
+
+  .order-item > img {
+    width: 60px;
+    height: 68px;
+  }
+
+  .order-item-details h3 {
+    font-size: 14px;
+  }
+
+  .order-quantity {
+    gap: 7px;
+  }
+
+  .order-quantity button {
+    width: 29px;
+    height: 29px;
+  }
+
+  .order-discount-card {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .order-discount-card span {
+    font-size: 13px;
+  }
+
+  .order-checkout {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .order-submit-button {
+    min-height: 64px;
+    font-size: 19px;
+  }
+}
